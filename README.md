@@ -82,4 +82,4 @@ python train_eval_b_trial.py --mode train
 - Training logs and metrics are tracked using WandB (Weights & Biases).
 - Evaluation results on the test set are printed after training completion.
 
-Wandb Report Link :- https://api.wandb.ai/links/cs23m063/9dfo5c1f
+Wandb Report Link :- 
