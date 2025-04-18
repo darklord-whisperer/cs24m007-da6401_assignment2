@@ -40,10 +40,18 @@ This part contains code to train a Convolutional Neural Network (CNN) model from
 | learning_rate        | Learning rate for optimizer                                | 0.001, 0.0001                                            |
 
 ## Usage
-- Take script of train_A.py from partA.
+- Take script of train_eval_a.py from partA.
+  
 ```bash
-python train_A.py --num_filters 64 --activation GELU  --filter_size_1 3 --filter_size_2 3 --filter_size_3 3 --filter_size_4 3 --filter_size_5 3 --filter_multiplier 1 --data_augmentation No --batch_normalization No --dropout 0.2 --dense_neurons 512 --epoch 10 --learning_rate 0.0001
+!python train_eval_a.py --train_dir "/content/drive/MyDrive/nature_12K/inaturalist_12K/train" --test_dir "/content/drive/MyDrive/nature_12K/inaturalist_12K/val" --num_filters 64 --filter_size_1 3 --filter_size_2 3 --filter_size_3 3 --filter_size_4 3 --filter_size_5 3 --activation SiLU --dense_neurons 1024 --dropout 0.3 --batch_norm Yes --filter_multiplier 1 --learning_rate 0.001 --epochs 20 --data_augmentation Yes
 ```
+- Take script of train_eval_a.py and run it in local machine.
+- 
+```bash
+>python train_eval_a.py --train_dir nature_12K\inaturalist_12K\train --test_dir nature_12K\inaturalist_12K\val --num_filters 64 --filter_size_1 3 --filter_size_2 3 --filter_size_3 3 --filter_size_4 3 --filter_size_5 3 --activation SiLU --dense_neurons 1024 --dropout 0.3 --batch_norm Yes --filter_multiplier 1 --learning_rate 0.001 --epochs 20 --data_augmentation Yes
+```
+
+
 ## Results
 - Training logs and metrics are tracked using WandB (Weights & Biases).
 - Evaluation results on the test set are printed after training completion.
