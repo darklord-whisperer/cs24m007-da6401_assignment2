@@ -43,7 +43,7 @@ This part contains code to train a Convolutional Neural Network (CNN) model from
 - Take script of train_A.py from partA.
 ```bash
 python train_A.py --num_filters 64 --activation GELU  --filter_size_1 3 --filter_size_2 3 --filter_size_3 3 --filter_size_4 3 --filter_size_5 3 --filter_multiplier 1 --data_augmentation No --batch_normalization No --dropout 0.2 --dense_neurons 512 --epoch 10 --learning_rate 0.0001
-
+```
 ## Results
 - Training logs and metrics are tracked using WandB (Weights & Biases).
 - Evaluation results on the test set are printed after training completion.
