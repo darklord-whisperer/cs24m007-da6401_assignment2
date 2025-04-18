@@ -1,64 +1,52 @@
-<div style="text-align: justify;">
+# DA6401 Fundamentals of Deep Learning – Assignment 2
 
-# CS6910 Fundamentals of Deep Learning - Assignment 2
-
-This repository contains all files for the second assignment of the CS6910 - Fundamentals of Deep Learning course at IIT Madras.
+This repository contains all files for the second assignment of the CS6910 – Fundamentals of Deep Learning course at IIT Madras.
 
 ## Contents
 
 - [Task](#task)
 - [Submission](#submission)
 - [Dataset](#dataset)
-- [Usage](#usage)
-  - [Running Manually](#running-manuallyn)
-  - [Running a Sweep using Wandb](#running-a-sweep-using-wandb)
+- [Usage](#usage)  
+  - [Running Manually](#running-manually)  
+  - [Running a Sweep using WandB](#running-a-sweep-using-wandb)  
   - [Customization](#customization)
 
-## Task
+---
 
-The task is to build and experiment with CNN based image classifiers.
+# Task
 
-## Submission
+*(Describe the assignment task here. E.g., “Train a CNN from scratch and fine‑tune a pre‑trained model on the iNaturalist 12K dataset.”)*
 
-My WandB project: https://wandb.ai/ed23s037/CS6910_AS2/overview
+# Submission
 
-My WandB report: https://wandb.ai/ed23s037/CS6910_AS2/reports/-CS6910-Assignment-2--Vmlldzo3NDM1Njcy
+*(Explain how to package and submit your solution. E.g., “Upload your `.py` scripts, the `README.md`, and the WandB link as a single zip to Canvas.”)*
 
-## Dataset
+# Dataset
 
-The dataset utilized for this assignment is `iNaturalist` dataset and can be used in the training like
+The dataset used in this assignment is the **iNaturalist 12K** subset, consisting of images of 10 different species.  
+- **Train**: `/content/drive/MyDrive/inaturalist_12K/train`  
+- **Val**: `/content/drive/MyDrive/inaturalist_12K/val`  
 
-```sh
-wget https://storage.googleapis.com/wandb_datasets/nature_12K.zip
-unzip nature_12K.zip
-```
+---
 
-## Usage
+# Usage
 
 ### Running Manually
-
-To train the model, use the following command (where x can be a and b):
-
-```sh
-$ python train_partx.py -wp <wandb_project_name> -we <wandb_entity_name>
-```
-
-You can also modify the following list of available options. To get the brief information about each:
-
-```sh
-$ python train.py -h
-```
-
-Similarly to evaluate the models use,
-
-```sh
-$ python eval_partx.py
-```
-
-The above code will generate the confusion matrix and will save the plot as a image.
-
-### Customization
-
-Refer to the `src` folder in both partA and partB for customizing the code. The `notebooks` folder has all the jupyter notebooks enlisting the different trails and base code for this implmentation.
-
-</div>
+- **Part A** (train from scratch):  
+  ```bash
+  python train_A.py \
+    --num_filters 64 \
+    --activation GELU  \
+    --filter_size_1 3 \
+    --filter_size_2 3 \
+    --filter_size_3 3 \
+    --filter_size_4 3 \
+    --filter_size_5 3 \
+    --filter_multiplier 1 \
+    --data_augmentation No \
+    --batch_normalization No \
+    --dropout 0.2 \
+    --dense_neurons 512 \
+    --epoch 10 \
+    --learning_rate 0.0001
