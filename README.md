@@ -76,7 +76,7 @@ This part focuses on fine-tuning pre-trained convolutional neural network (CNN) 
 ## Usage
 - Take script of train_B.py from partB
 ```bash
-python train_eval_b_trial.py --mode train
+python train_part_b.py
 ```
 ## Results
 - Training logs and metrics are tracked using WandB (Weights & Biases).
