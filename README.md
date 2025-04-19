@@ -61,16 +61,17 @@ python train_eval_a.py --train_dir nature_12K\inaturalist_12K\train --test_dir n
 This part focuses on fine-tuning pre-trained convolutional neural network (CNN) models using PyTorch for image classification tasks. The goal is to classify images from the iNaturalist 12K dataset into 10 different classes representing various species of organisms. Fine-tuning a pre-trained model is a common practice in many real-world applications of deep learning, where instead of training a model from scratch, a pre-trained model is used as a starting point and then fine-tuned on a specific dataset to adapt it to the new task.
 
 ## Arguments
-| Argument             | Description                                                | Choices                               |
-|----------------------|------------------------------------------------------------|---------------------------------------|
-| activation           | Activation function for the model                          | ReLU, GELU, SiLU, Mish                |
-| data_augmentation    | Whether to use data augmentation                           | Yes, No                               |
-| batch_normalization  | Whether to use batch normalization                         | Yes, No                               |
-| dropout              | Dropout rate                                               | 0.2, 0.3                              |
-| dense_neurons        | Number of neurons in the fully connected layer             | 128, 256, 512, 1024                   |
-| epoch                | Number of epochs for training                              | 5, 10                                 |
-| learning_rate        | Learning rate for optimizer                                | 0.001, 0.0001                         |
-| strategy             | Training strategy for model                                | feature_extraction, fine_tuning, fine_tuning_partial, progressive_unfreezing |
+| Argument                | Description                                            | Default     |
+|-------------------------|--------------------------------------------------------|-------------|
+| `pretrain_model`        | Pre‑trained model architecture to use                  | InceptionV3 |
+| `epoch`                 | Number of training epochs                              | 9           |
+| `batch_size`            | Number of samples per gradient update                  | 16          |
+| `augmentation`          | Whether to apply data augmentation                     | True        |
+| `fc_size`               | Number of neurons in the fully‑connected layer         | 256         |
+| `droprate`              | Dropout rate                                           | 0.4         |
+| `batch_normalization`   | Whether to use batch normalization                     | True        |
+| `num_of_trainable_layers` | Number of layers to fine‑tune in the pre‑trained model | 1           |
+
 
 
 ## Usage
