@@ -39,10 +39,10 @@ This part focuses on fine-tuning pre-trained convolutional neural network (CNN) 
   trainset_dir = "nature_12K/inaturalist_12K/train"
   testset_dir =  "nature_12K/inaturalist_12K/val"
   ```
-  **remove "%%writefile train_b.py" 1st line from the python script and then run in Google collab:**
+- **remove "%%writefile train_b.py" 1st line from the python script and then run in Google collab:**
   ```bash
-python train_part_b.py
-```
+  python train_part_b.py
+
 ## Usage
 - Open this in kaggle and collab
 - Take script of train_part_b.py from partB
