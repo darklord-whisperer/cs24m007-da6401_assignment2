@@ -1,4 +1,4 @@
-%%writefile train_b.py
+%%writefile train_part_b.py
 # -*- coding: utf-8 -*-
 
 import os
