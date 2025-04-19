@@ -15,8 +15,30 @@ This part focuses on fine-tuning pre-trained convolutional neural network (CNN) 
 | `batch_normalization`   | Whether to use batch normalization                     | True        |
 | `num_of_trainable_layers` | Number of layers to fine‑tune in the pre‑trained model | 1           |
 
+## Applicable for Google collab:-
+## 📂 Dataset Setup
 
+1. **Download the dataset**  
+   Download the `nature_12K.zip` from:  
+   `https://storage.googleapis.com/wandb_datasets/nature_12K.zip`
 
+2. **Extract the archive**  
+   Unzip to produce:
+   nature_12K/ └── inaturalist_12K/ ├── train/ └── val/
+
+3. **Set dataset paths**  
+- **Google Colab**  
+  Upload the `inaturalist_12K` folder to Google Drive, then run:  
+  ```bash
+  trainset_dir = "/content/drive/MyDrive/nature_12K/inaturalist_12K/train"
+  testset_dir =  "/content/drive/MyDrive/nature_12K/inaturalist_12K/val"
+  ```
+- **Local machine**  
+  If the folders reside in your project directory:
+  ```bash
+  trainset_dir = "nature_12K/inaturalist_12K/train"
+  testset_dir =  "nature_12K/inaturalist_12K/val"
+  ```
 ## Usage
 - Open this in kaggle and collab
 - Take script of train_part_b.py from partB
