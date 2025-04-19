@@ -109,7 +109,7 @@ This part focuses on fine-tuning pre-trained convolutional neural network (CNN) 
 
 3. **Set dataset paths**  
 - **Google Colab**  
-  Upload the `inaturalist_12K` folder to Google Drive, then run:  
+  Upload the `inaturalist_12K` folder to Google Drive, then set:  
   ```bash
   trainset_dir = "/content/drive/MyDrive/nature_12K/inaturalist_12K/train"
   testset_dir =  "/content/drive/MyDrive/nature_12K/inaturalist_12K/val"
@@ -120,6 +120,10 @@ This part focuses on fine-tuning pre-trained convolutional neural network (CNN) 
   trainset_dir = "nature_12K/inaturalist_12K/train"
   testset_dir =  "nature_12K/inaturalist_12K/val"
   ```
+- **remove "%%writefile train_b.py" 1st line from the python script and then run in Google collab:**
+  ```bash
+  python train_part_b.py
+
 ## Usage
 - Open this in kaggle and collab
 - Take script of train_part_b.py from partB
@@ -129,5 +133,5 @@ python train_part_b.py
 ## Results
 - Training logs and metrics are tracked using WandB (Weights & Biases).
 - Evaluation results on the test set are printed after training completion.
-  
+
 Wandb Report Link :- https://wandb.ai/cs24m007-iit-madras/Alik_Final_DA6401_DeepLearning_Assignment2/reports/DA6401-Assignment-2-Alik-Sarkar--VmlldzoxMjM0NDQzOA
