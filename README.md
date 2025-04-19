@@ -82,4 +82,4 @@ python train_part_b.py
 - Training logs and metrics are tracked using WandB (Weights & Biases).
 - Evaluation results on the test set are printed after training completion.
 
-Wandb Report Link :- 
+Wandb Report Link :- https://wandb.ai/cs24m007-iit-madras/Alik_Final_DA6401_DeepLearning_Assignment2/reports/DA6401-Assignment-2-Alik-Sarkar--VmlldzoxMjM0NDQzOA
