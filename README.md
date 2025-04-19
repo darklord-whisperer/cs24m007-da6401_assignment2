@@ -40,7 +40,7 @@ This part contains code to train a Convolutional Neural Network (CNN) model from
 | learning_rate        | Learning rate for optimizer                                | 0.001, 0.0001                                            |
 
 ## Usage
-- Take script of train_eval_a.py from partA.
+- Take script of train_eval_a.py from partA and run it in google collab.
   
 ```bash
 !python train_eval_a.py --train_dir "/content/drive/MyDrive/nature_12K/inaturalist_12K/train" --test_dir "/content/drive/MyDrive/nature_12K/inaturalist_12K/val" --num_filters 64 --filter_size_1 3 --filter_size_2 3 --filter_size_3 3 --filter_size_4 3 --filter_size_5 3 --activation SiLU --dense_neurons 1024 --dropout 0.3 --batch_norm Yes --filter_multiplier 1 --learning_rate 0.001 --epochs 20 --data_augmentation Yes
